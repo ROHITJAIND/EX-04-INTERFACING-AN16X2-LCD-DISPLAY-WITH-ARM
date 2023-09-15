@@ -169,18 +169,35 @@ https://engineeringxpert.com/wp-content/uploads/2022/04/26.png
 ![image](https://user-images.githubusercontent.com/36288975/233856904-99eb708a-c907-4595-9025-c9dbd89b8879.png)
 
 ## CIRCUIT DIAGRAM 
-![image](https://user-images.githubusercontent.com/36288975/233857974-bda6200e-4f88-4e7b-b189-4da80210fa23.png)
+![Screenshot 2023-09-15 162155](https://github.com/ROHITJAIND/EX-04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM/assets/118707073/4251e051-52ff-4999-bba9-2d081da89f15)
+
 
 
 ## STM 32 CUBE PROGRAM :
+```
+Developed By: ROHIT JAIN D
+Register Number: 212222230120
+```
+
+```C
+#include "main.h"
+#include "lcd.h"
+MX_GPIO_Init();
+  Lcd_PortType ports[]={GPIOA,GPIOA,GPIOA,GPIOA};
+  Lcd_PinType pins[]={GPIO_PIN_3,GPIO_PIN_2,GPIO_PIN_1,GPIO_PIN_0};
+  Lcd_HandleTypeDef lcd;
+  lcd = Lcd_create(ports,pins,GPIOB,GPIO_PIN_0,GPIOB,GPIO_PIN_1,LCD_4_BIT_MODE);
+  Lcd_cursor(&lcd,0,0);
+  Lcd_string(&lcd,"DEPT:AI-DS");
+  Lcd_cursor(&lcd,1,0);
+  Lcd_string(&lcd,"ROHIT JAIN D");
+
+```
 
 
 
-
-## Output screen shots of proteus  :
- 
- 
- ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
+ ## CIRCUIT DIAGRAM
+ ![Screenshot (91)](https://github.com/ROHITJAIND/EX-04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM/assets/118707073/e3893dd3-52d9-4634-97fb-e0ea7cea6523)
  
  
 ## Result :
