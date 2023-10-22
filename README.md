@@ -171,14 +171,6 @@ Hex Code Command to LCD Instruction Register.
       <img src="https://user-images.githubusercontent.com/36288975/226189461-a573e62f-a109-4631-a250-a20925758fe0.png">
     </td>
   </tr>
-    <tr>
-    <td width="50%">
-      8. edit the program and as per required.
-    </td>
-    <td width="50%">
-      <img src="https://user-images.githubusercontent.com/36288975/226189461-a573e62f-a109-4631-a250-a20925758fe0.png">
-    </td>
-  </tr>  
   <tr>
     <td width="50%">
       9. Add necessary library files of LCD 16x2 , write the program and use project and build.
