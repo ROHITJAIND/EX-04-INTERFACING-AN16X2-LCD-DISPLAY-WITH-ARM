@@ -19,21 +19,12 @@ Below is the Pinout and Pin Description of 16x2 LCD Module:
 <img height=20% width=65% src="https://user-images.githubusercontent.com/36288975/233858086-7b1a88a2-f941-475c-86c2-b3bae68bdf7e.png">
 4-bit and 8-bit Mode of LCD:
 The LCD can work in two different modes, namely the 4-bit mode and the 8-bit mode. In 4 bit mode we send the data nibble by nibble, first upper nibble and then lower nibble. For those of you who don’t know what a nibble is: a nibble is a group of four bits, so the lower four bits (D0-D3) of a byte form the lower nibble while the upper four bits (D4-D7) of a byte form the higher nibble. This enables us to send 8 bit data.Whereas in 8 bit mode we can send the 8-bit data directly in one stroke since we use all the 8 data lines.
-8-bit mode is faster and flawless than 4-bit mode. But the major drawback is that it needs 8 data lines connected to the microcontroller. This will make us run out of I/O pins on our MCU, so 4-bit mode is widely used. No control pins are used to set these modes.
-<table>
-  <tr>
-    <td width=50%>
-      <img src="https://user-images.githubusercontent.com/36288975/233857710-541ac1c2-786c-4dfc-b7b5-e3a4868a9cb6.png">
-    </td>
-    <td width=50%>
-    <img src="https://user-images.githubusercontent.com/36288975/233857733-05df5dbf-1a1e-479e-85bb-8014a39ad878.png">
-    </td>
-  </tr>
-</table>
+8-bit mode is faster and flawless than 4-bit mode. But the major drawback is that it needs 8 data lines connected to the microcontroller. This will make us run out of I/O pins on our MCU, so 4-bit mode is widely used. No control pins are used to set these modes.<br>
   
 - LCD Commands:
 There are some preset commands instructions in LCD, which we need to send to LCD through some microcontroller. Some important command instructions are given below:
 Hex Code Command to LCD Instruction Register.
+
 <table>
   <tr>
     <td>
@@ -102,6 +93,19 @@ Hex Code Command to LCD Instruction Register.
   </tr>
 </table>
 
+
+<table>
+  <tr>
+    <td width=50%>
+      <img src="https://user-images.githubusercontent.com/36288975/233857710-541ac1c2-786c-4dfc-b7b5-e3a4868a9cb6.png">
+    </td>
+    <td width=50%>
+    <img src="https://user-images.githubusercontent.com/36288975/233857733-05df5dbf-1a1e-479e-85bb-8014a39ad878.png">
+    </td>
+  </tr>
+</table>
+  
+
 ### Procedure:
 <table>
   <tr>
@@ -118,7 +122,6 @@ Hex Code Command to LCD Instruction Register.
     </td>
     <td width="50%">
   <img src="https://user-images.githubusercontent.com/36288975/226189215-2d13ebfb-507f-44fc-b772-02232e97c0e3.png">
-    <img src="https://user-images.githubusercontent.com/36288975/226189230-bf2d90dd-9695-4aaf-b2a6-6d66454e81fc.png">
     </td>
   </tr>
   <tr>
@@ -151,7 +154,6 @@ Hex Code Command to LCD Instruction Register.
     </td>
     <td width="50%">
       <img src="https://user-images.githubusercontent.com/36288975/226189403-f7179f1a-3eae-4637-826b-ab4ec35ba1e1.png">
-<img src="https://user-images.githubusercontent.com/36288975/226189425-2b2414ce-49b3-4b61-a260-c658cb2e4152.png">
     </td>
   </tr>
     <tr>
@@ -160,7 +162,6 @@ Hex Code Command to LCD Instruction Register.
     </td>
     <td width="50%">
 <img src="https://user-images.githubusercontent.com/36288975/226189443-8b43451d-0b14-47e4-a20b-cc09c6ad8458.png">
-<img src="https://user-images.githubusercontent.com/36288975/226189450-85ffa969-2ffb-4788-81e5-72d60fdda0f1.png">  
     </td>
   </tr>
     <tr>
@@ -225,14 +226,10 @@ https://engineeringxpert.com/wp-content/uploads/2022/04/26.png
 </table>
 
 ### STM 32 CUBE PROGRAM :
-```
-Developed By: ROHIT JAIN D
-Register Number: 212222230120
-```
 
 ```C
-#include "main.h"
-#include "lcd.h"
+#include "main.h"                                                                        Developed By: ROHIT JAIN D
+#include "lcd.h"                                                                         Register No: 212222230120
 MX_GPIO_Init();
   Lcd_PortType ports[]={GPIOA,GPIOA,GPIOA,GPIOA};
   Lcd_PinType pins[]={GPIO_PIN_3,GPIO_PIN_2,GPIO_PIN_1,GPIO_PIN_0};
